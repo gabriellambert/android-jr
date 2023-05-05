@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#386B81"
+    android:background="@color/azul_escuro"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,4 +17,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.29000002"
         app:srcCompat="@drawable/desenho_android" />
+
+    <TextView
+        android:id="@+id/text_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="seu app de vagas mobile júnior"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/img_google"
+        app:layout_constraintStart_toStartOf="@+id/img_google"
+        app:layout_constraintTop_toBottomOf="@+id/img_google" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="23dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_google"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="@+id/btn_google"
+        app:layout_constraintTop_toTopOf="@+id/btn_google"
+        app:srcCompat="@drawable/logo_googleg_48dp"
+        android:elevation="10dp"/>
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="328dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:elevation="5dp"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="500"
+        android:letterSpacing="-0.01"
+        android:paddingStart="40dp"
+        android:textAllCaps="false"
+        android:text="Entrar com Google"
+        android:textColor="@color/cinza_escuro"
+        android:textSize="16dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_logo"
+        app:layout_constraintStart_toStartOf="@+id/text_logo"
+        app:layout_constraintTop_toBottomOf="@+id/text_logo" />
+
+    <TextView
+        android:id="@+id/tx_acessar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acessar_sem_conta"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="600"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_google"
+        app:layout_constraintStart_toStartOf="@+id/btn_google"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

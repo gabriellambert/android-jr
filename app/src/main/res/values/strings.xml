@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Jr</string>
+    <string name="acessar_sem_conta"><u>Acessar sem conta</u></string>
 </resources>
