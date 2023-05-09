@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="azul_escuro">#386B81</color>
     <color name="cinza_escuro">#88000000</color>
-    <color name="laranja">#DB6B4F</color>
-    <color name="verde_amarelado">#CADB5A</color>
+    <color name="lemon_green">#CADB5A</color>
+    <color name="orange">#DB6B4F</color>
 </resources>
