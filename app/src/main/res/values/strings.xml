@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android Jr</string>
     <string name="acessar_sem_conta"><u>Acessar sem conta</u></string>
+    <string name="title_activity_home">Home</string>
 </resources>
