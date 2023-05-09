@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         setupTabLayout()
         setupBottomNavigation()
     }
