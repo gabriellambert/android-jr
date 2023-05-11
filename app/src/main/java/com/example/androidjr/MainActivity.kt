@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToHomeScreen() {
-        binding!!.btnGoogle.setOnClickListener {
+        binding!!.buttonGoogleLogin.setOnClickListener {
             Intent(this@MainActivity, HomeActivity::class.java).apply {
                 startActivity(this)
             }
