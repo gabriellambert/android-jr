@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Tabs.Settings">
+    tools:context=".ui.fragment.tabs.AndroidFragment">
 
     <TextView
+        android:id="@+id/fragment_android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Settings"
+        android:text="@string/android"
         android:gravity="center"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
-
 </FrameLayout>

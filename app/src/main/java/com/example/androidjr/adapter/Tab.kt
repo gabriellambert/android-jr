@@ -1,8 +1,8 @@
-package com.example.androidjr.Adapter
+package com.example.androidjr.adapter
 
-import com.example.androidjr.Fragments.Tabs.Settings
-import com.example.androidjr.Fragments.Tabs.Profile
-import com.example.androidjr.Fragments.Tabs.Home
+import com.example.androidjr.ui.fragment.tabs.IosFragment
+import com.example.androidjr.ui.fragment.tabs.AndroidFragment
+import com.example.androidjr.ui.fragment.tabs.AllFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -14,9 +14,9 @@ internal class Tab(fm: FragmentManager, private var totalTabs: Int): FragmentPag
 
     override fun getItem(position: Int): Fragment {
         return when(position){
-            0 -> Home()
-            1 -> Profile()
-            2 -> Settings()
+            0 -> AllFragment()
+            1 -> AndroidFragment()
+            2 -> IosFragment()
 
             else -> getItem(position)
         }

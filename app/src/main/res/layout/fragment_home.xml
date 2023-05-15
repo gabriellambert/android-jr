@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.BottomNavigation.HomeFragment">
+    tools:context=".ui.fragment.navigation.HomeFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home"
+        android:text="@string/home"
         android:gravity="center"
         android:textSize="30sp"
         android:textStyle="bold"

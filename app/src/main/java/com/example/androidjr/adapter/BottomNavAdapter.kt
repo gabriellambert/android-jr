@@ -1,8 +1,8 @@
-package com.example.androidjr.Adapter
+package com.example.androidjr.adapter
 
-import com.example.androidjr.Fragments.BottomNavigation.HomeFragment
-import com.example.androidjr.Fragments.BottomNavigation.ProfileFragment
-import com.example.androidjr.Fragments.BottomNavigation.ListFragment
+import com.example.androidjr.ui.fragment.navigation.HomeFragment
+import com.example.androidjr.ui.fragment.navigation.ProfileFragment
+import com.example.androidjr.ui.fragment.navigation.ListFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter

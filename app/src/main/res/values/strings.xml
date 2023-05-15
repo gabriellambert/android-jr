@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Android Jr</string>
-    <string name="acessar_sem_conta"><u>Acessar sem conta</u></string>
-    <string name="icone_vagas">icone vagas</string>
-    <string name="icone_bookmark">Icone bookmark</string>
-    <string name="icone_profile">icone_profile</string>
+    <string name="login_without_account"><u>Acessar sem conta</u></string>
+    <string name="icon_vacancies">icone vagas</string>
+    <string name="icon_bookmark">Icone bookmark</string>
+    <string name="icon_profile">icone_profile</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -47,7 +47,15 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="seu_app_de_vagas_mobile_j_nior">seu app de vagas mobile júnior</string>
-    <string name="entrar_com_google">Entrar com Google</string>
+    <string name="your_junior_mobile_job_app">seu app de vagas mobile júnior</string>
+    <string name="sign_in_with_google">Entrar com Google</string>
     <string name="floating_button">floating button</string>
+    <string name="all">Todos</string>
+    <string name="android">Android</string>
+    <string name="ios">Ios</string>
+    <string name="list">Lista</string>
+    <string name="profile">Perfil</string>
+    <string name="home">Home</string>
+    <string name="android_image">imagem android</string>
+    <string name="google_image">logo google</string>
 </resources>
