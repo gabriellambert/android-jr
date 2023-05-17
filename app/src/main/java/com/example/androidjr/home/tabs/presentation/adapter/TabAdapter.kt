@@ -1,13 +1,13 @@
-package com.example.androidjr.adapter
+package com.example.androidjr.home.tabs.presentation.adapter
 
-import com.example.androidjr.ui.fragment.tabs.IosFragment
-import com.example.androidjr.ui.fragment.tabs.AndroidFragment
-import com.example.androidjr.ui.fragment.tabs.AllFragment
+import com.example.androidjr.home.tabs.presentation.ui.IosFragment
+import com.example.androidjr.home.tabs.presentation.ui.AndroidFragment
+import com.example.androidjr.home.tabs.presentation.ui.AllFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-internal class Tab(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
+internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
         return totalTabs
     }

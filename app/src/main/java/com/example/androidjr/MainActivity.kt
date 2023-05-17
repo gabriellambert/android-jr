@@ -1,18 +1,17 @@
-package com.example.androidjr.ui.activity
+package com.example.androidjr
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidjr.R
-import com.example.androidjr.adapter.Tab
-import com.example.androidjr.databinding.ActivityHomeBinding
-import com.example.androidjr.ui.fragment.navigation.HomeFragment
-import com.example.androidjr.ui.fragment.navigation.ListFragment
-import com.example.androidjr.ui.fragment.navigation.ProfileFragment
+import com.example.androidjr.home.tabs.presentation.adapter.TabAdapter
+import com.example.androidjr.databinding.ActivityMainBinding
+import com.example.androidjr.home.presentation.ui.RolesFragment
+import com.example.androidjr.profile.presentation.ui.ProfileFragment
+import com.example.androidjr.saveRoles.presentation.ui.SaveRolesFragment
 import com.google.android.material.tabs.TabLayout
 
-class HomeActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private val binding by lazy {
-        ActivityHomeBinding.inflate(layoutInflater)
+        ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +26,8 @@ class HomeActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnNavigationItemReselectedListener { item ->
             when (item.itemId) {
-                R.id.ic_roles -> HomeFragment()
-                R.id.ic_bookmarks -> ListFragment()
+                R.id.ic_roles -> RolesFragment()
+                R.id.ic_bookmarks -> SaveRolesFragment()
                 else -> ProfileFragment()
             }
         }
@@ -41,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
             addTab(binding.tabLayout.newTab().setText("Ios"))
             tabGravity = TabLayout.GRAVITY_FILL
         }
-        val adapter = Tab(supportFragmentManager, binding.tabLayout.tabCount)
+        val adapter = TabAdapter(supportFragmentManager, binding.tabLayout.tabCount)
         binding.viewPager.adapter = adapter
 
         binding.viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))

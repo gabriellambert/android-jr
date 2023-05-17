@@ -1,14 +1,15 @@
-package com.example.androidjr.ui.activity
+package com.example.androidjr.login.presentation.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidjr.databinding.ActivityMainBinding
+import com.example.androidjr.MainActivity
+import com.example.androidjr.databinding.ActivityLoginBinding
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private val binding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
+        ActivityLoginBinding.inflate(layoutInflater)
     }
 
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToHomeScreen() {
         binding.buttonGoogleLogin.setOnClickListener {
-            Intent(this@MainActivity, HomeActivity::class.java).apply {
+            Intent(this@LoginActivity, MainActivity::class.java).apply {
                 startActivity(this)
             }
         }

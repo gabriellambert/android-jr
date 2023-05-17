@@ -1,4 +1,4 @@
-package com.example.androidjr.ui.fragment.tabs
+package com.example.androidjr.home.tabs.presentation.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
