@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.domain.entity.RoleItemEntity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_role"
+        android:layout_margin="16dp"
+        android:maxLines="1"
+        android:backgroundTint="@color/dark_blue"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        android:letterSpacing="-0.01"
+        android:lineHeight="24sp"
+        android:paddingBottom="16sp"
+        android:paddingTop="16sp"
+        android:paddingLeft="50sp"
+        android:paddingRight="50sp"
+        tools:text="@tools:sample/lorem/random"
+        />
+
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="22dp"
+        android:layout_height="12.63dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_role"
+        app:layout_constraintStart_toStartOf="@+id/bottom_role"
+        app:layout_constraintTop_toTopOf="@id/bottom_role"
+        app:layout_constraintVertical_bias="0.541"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/image_arrow"
+        android:layout_width="5dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_role"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_role"
+        app:layout_constraintTop_toTopOf="@id/bottom_role"
+        app:layout_constraintVertical_bias="0.541"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
