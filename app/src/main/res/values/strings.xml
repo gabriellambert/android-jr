@@ -63,4 +63,17 @@
     <string name="editar_perfil">Editar perfil</string>
     <string name="user_profile_picture">User profile picture</string>
     <string name="editar_foto_de_perfil"><u>Editar foto de perfil</u></string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="t_tulo">Título</string>
+    <string name="localiza_o">Localização</string>
+    <string name="github">Github</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="linguagens">Linguagens</string>
+    <string name="swift">Swift</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="java">Java</string>
+    <string name="javascript">Javascript</string>
+    <string name="objective_c">Objective-C</string>
+    <string name="confirmar">CONFIRMAR</string>
 </resources>
