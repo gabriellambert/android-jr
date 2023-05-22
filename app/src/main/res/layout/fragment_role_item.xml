@@ -1,50 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.domain.entity.RoleItemEntity">
+    android:layout_height="56dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="24dp"
 
-    <Button
+    android:backgroundTint="@color/dark_blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_role"
-        android:layout_margin="16dp"
-        android:maxLines="1"
-        android:backgroundTint="@color/dark_blue"
-        android:fontFamily="@font/roboto"
-        android:textFontWeight="600"
-        android:textSize="16sp"
-        android:letterSpacing="-0.01"
-        android:lineHeight="24sp"
-        android:paddingBottom="16sp"
-        android:paddingTop="16sp"
-        android:paddingLeft="50sp"
-        android:paddingRight="50sp"
-        tools:text="@tools:sample/lorem/random"
-        />
+        android:layout_height="56dp">
 
-    <ImageView
-        android:id="@+id/image_icon"
-        android:layout_width="22dp"
-        android:layout_height="12.63dp"
-        android:layout_marginStart="25dp"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_role"
-        app:layout_constraintStart_toStartOf="@+id/bottom_role"
-        app:layout_constraintTop_toTopOf="@id/bottom_role"
-        app:layout_constraintVertical_bias="0.541"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        <ImageView
+            android:id="@+id/image_logo_title"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="22dp"
+            tools:src="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/image_arrow"
-        android:layout_width="5dp"
-        android:layout_height="10dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintBottom_toBottomOf="@id/bottom_role"
-        app:layout_constraintEnd_toEndOf="@+id/bottom_role"
-        app:layout_constraintTop_toTopOf="@id/bottom_role"
-        app:layout_constraintVertical_bias="0.541"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        <TextView
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/text_title"
+            android:layout_width="177dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="49dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/image_arrow"
+            app:layout_constraintStart_toEndOf="@id/image_logo_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Desenvolvedor Android" />
+
+        <ImageView
+
+            android:id="@+id/image_arrow"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="298dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:src="@drawable/ic_arrow_right" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
