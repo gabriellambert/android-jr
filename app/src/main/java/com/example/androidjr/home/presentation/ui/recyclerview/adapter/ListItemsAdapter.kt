@@ -10,7 +10,7 @@ import com.example.androidjr.home.domain.entity.RoleItemEntity
 
 class ListItemsAdapter(
     private val context: Context,
-    items : List<RoleItemEntity>
+    items: List<RoleItemEntity>
 ) : RecyclerView.Adapter<ListItemsAdapter.ViewHolder>() {
 
     private val items = items.toMutableList()
@@ -19,19 +19,14 @@ class ListItemsAdapter(
     class ViewHolder(private val binding: FragmentRoleItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: RoleItemEntity) {
-            val title = binding.textTitle
-            title.text = item.title
-            val image = binding.imageLogoTitle
-            image.imageAlpha = item.image
-
-
-
+            binding.textTitle.text = item.title
+            binding.imageLogoTitle.setImageResource(item.image)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(context)
-        val binding = FragmentRoleItemBinding.inflate(inflater,parent,false)
+        val binding = FragmentRoleItemBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
 
