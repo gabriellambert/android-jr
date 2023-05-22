@@ -58,4 +58,8 @@
     <string name="home">Home</string>
     <string name="android_image">imagem android</string>
     <string name="google_image">logo google</string>
+    <string name="btn_edit_profile">Editar perfil</string>
+    <string name="btn_exit_profile">Sair</string>
+    <string name="ic_location">Location icon</string>
+    <string name="main_profile_img_cardview">Main profile image</string>
 </resources>
