@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         setupTabLayout()
         setupBottomNavigation()
         setupRecycleView()
-
-
     }
 
 
@@ -69,8 +67,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecycleView() {
         val recyclerView = binding.recyclerView
+        recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
+
     }
+
+
+
 
 }
