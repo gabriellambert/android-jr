@@ -58,7 +58,6 @@
     <string name="home">Home</string>
     <string name="android_image">imagem android</string>
     <string name="google_image">logo google</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="editar_perfil">Editar perfil</string>
     <string name="user_profile_picture">User profile picture</string>
@@ -76,4 +75,8 @@
     <string name="javascript">Javascript</string>
     <string name="objective_c">Objective-C</string>
     <string name="confirmar">CONFIRMAR</string>
+    <string name="btn_edit_profile">Editar perfil</string>
+    <string name="btn_exit_profile">Sair</string>
+    <string name="ic_location">Location icon</string>
+    <string name="main_profile_img_cardview">Main profile image</string>
 </resources>
