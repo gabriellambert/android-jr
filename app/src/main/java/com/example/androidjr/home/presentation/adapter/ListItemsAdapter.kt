@@ -1,4 +1,4 @@
-package com.example.androidjr.home.presentation.ui.recyclerview.adapter
+package com.example.androidjr.home.presentation.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
