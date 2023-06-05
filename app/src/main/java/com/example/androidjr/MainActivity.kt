@@ -1,6 +1,7 @@
 package com.example.androidjr
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidjr.databinding.ActivityMainBinding
 import com.example.androidjr.home.domain.entity.params.RoleModel
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             addTab(binding.tabLayout.newTab().setText("Todos"))
             addTab(binding.tabLayout.newTab().setText("Android"))
             addTab(binding.tabLayout.newTab().setText("Ios"))
+            addTab(binding.tabLayout.newTab().setText("Flutter"))
             tabGravity = TabLayout.GRAVITY_FILL
         }
         val adapter = TabAdapter(supportFragmentManager, binding.tabLayout.tabCount)
@@ -52,8 +54,8 @@ class MainActivity : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 binding.viewPager.currentItem = tab!!.position
             }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
     }
