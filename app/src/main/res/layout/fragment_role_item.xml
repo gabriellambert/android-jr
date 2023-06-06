@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="@color/dark_blue"
+    app:cardCornerRadius="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/text_title"
+        app:layout_constraintTop_toBottomOf="@id/text_title">
+
+        <TextView
+
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="49dp"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="0.05"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_title"
+            tools:text="Desenvolvedor Android" />
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="328dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/text_title"
+            app:layout_constraintStart_toStartOf="@id/text_title"
+            app:layout_constraintTop_toBottomOf="@id/image_company"
+            tools:text="@string/description_job_opportunity" />
+
+        <ImageView
+            android:id="@+id/image_title"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+
+            android:id="@+id/image_expand"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="298dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@id/image_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_title" />
+
+        <ImageView
+            android:id="@+id/image_location"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_location"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/text_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_title" />
+
+        <TextView
+            android:id="@+id/text_location_saopaulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="0.05"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/image_location"
+            app:layout_constraintBottom_toTopOf="@id/text_description"
+            app:layout_constraintEnd_toStartOf="@id/image_company"
+            app:layout_constraintStart_toEndOf="@id/image_location"
+            app:layout_constraintTop_toBottomOf="@id/image_title"
+
+            tools:text="São Paulo" />
+
+        <ImageView
+            android:id="@+id/image_company"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="16dp"
+
+            android:src="@drawable/ic_company"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/text_description"
+            app:layout_constraintEnd_toStartOf="@id/text_company_google"
+            app:layout_constraintTop_toBottomOf="@id/text_title"
+
+            />
+
+        <TextView
+            android:id="@+id/text_company_google"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/image_location"
+            app:layout_constraintBottom_toTopOf="@id/text_description"
+            app:layout_constraintEnd_toEndOf="@id/image_payment"
+
+            app:layout_constraintStart_toStartOf="@id/botton_apply"
+            app:layout_constraintTop_toTopOf="@id/image_location"
+            tools:text="Google" />
+
+        <ImageView
+            android:id="@+id/image_payment"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_payment"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/image_location"
+            app:layout_constraintEnd_toStartOf="@id/text_payment_value"
+            app:layout_constraintTop_toTopOf="@id/image_location" />
+
+        <TextView
+            android:id="@+id/text_payment_value"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/image_payment"
+
+            app:layout_constraintBottom_toTopOf="@id/text_description"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_payment"
+            tools:text="$5000" />
+
+        <Button
+            android:id="@+id/botton_apply"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/orange"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="26dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="26dp"
+            android:paddingBottom="10dp"
+            android:shadowRadius="100"
+            android:text="@string/apply"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/image_expand"
+            app:layout_constraintTop_toBottomOf="@id/text_description" />
+
+        <ImageView
+            android:id="@+id/ic_bookmarks_expand"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_bookmark_expand"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

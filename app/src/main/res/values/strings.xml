@@ -59,6 +59,9 @@
     <string name="android_image">imagem android</string>
     <string name="google_image">logo google</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">descrição</string>
+    <string name="description_job_opportunity">Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.</string>
+    <string name="apply">CANDIDATAR-SE</string>
     <string name="editar_perfil">Editar perfil</string>
     <string name="user_profile_picture">User profile picture</string>
     <string name="editar_foto_de_perfil"><u>Editar foto de perfil</u></string>
