@@ -1,12 +1,10 @@
 package com.example.androidjr.home.bottomNavigation.presentation.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.androidjr.R
 import com.example.androidjr.databinding.FragmentProfileBinding
 import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 
@@ -37,11 +35,7 @@ class ProfileFragment : Fragment() {
     private fun goToEditProfileScreen() {
         binding.buttonEditProfile.setOnClickListener {
             val editProfileFragment = EditProfileFragment()
-            val fragmentTransaction = parentFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment_edit_profile, editProfileFragment)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
-
+            editProfileFragment.show(parentFragmentManager, "EditProfileFragment")
         }
     }
 }
