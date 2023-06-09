@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.androidjr.R
 import com.example.androidjr.databinding.FragmentProfileBinding
 import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 
@@ -35,9 +36,12 @@ class ProfileFragment : Fragment() {
 
     private fun goToEditProfileScreen() {
         binding.buttonEditProfile.setOnClickListener {
-            Intent(requireContext(), EditProfileFragment::class.java).apply {
-                startActivity(this)
-            }
+            val editProfileFragment = EditProfileFragment()
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_edit_profile, editProfileFragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+
         }
     }
 }

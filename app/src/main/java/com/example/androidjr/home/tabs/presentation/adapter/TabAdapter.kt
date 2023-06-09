@@ -5,7 +5,7 @@ import com.example.androidjr.home.tabs.presentation.ui.RolesFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.androidjr.profile.presentation.ui.EditProfileFragment
+import com.example.androidjr.home.tabs.presentation.ui.IosFragment
 
 internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
@@ -16,7 +16,7 @@ internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): Frag
         return when(position){
             0 -> RolesFragment()
             1 -> BooksmarkFragment()
-            2 -> EditProfileFragment()
+            2 -> IosFragment()
 
             else -> getItem(position)
         }

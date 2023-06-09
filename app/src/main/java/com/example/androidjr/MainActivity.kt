@@ -27,17 +27,18 @@ class MainActivity() : AppCompatActivity() {
             tabGravity = TabLayout.GRAVITY_FILL
         }
         val adapter = TabAdapter(supportFragmentManager, binding.tabLayout.tabCount)
-        binding.viewPager.adapter = adapter
+        binding.viewPagerTab.adapter = adapter
 
-        binding.viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
+        binding.viewPagerTab.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.viewPager.currentItem = tab!!.position
+                binding.viewPagerTab.currentItem = tab!!.position
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+        return
     }
 
     private fun setupRecycleView() {
@@ -52,8 +53,7 @@ class MainActivity() : AppCompatActivity() {
         setContentView(binding.root)
 
         setupBottomNavigation()
-
-
+        setupTabLayout()
     }
 
     private fun setupBottomNavigation() {
@@ -64,14 +64,14 @@ class MainActivity() : AppCompatActivity() {
                 R.id.ic_profile -> 2
                 else -> 0
             }
-            binding.viewPager.currentItem = position
+            binding.viewPagerNav.currentItem = position
             true
         }
 
         val adapter = BottomNavAdapter(supportFragmentManager, binding.bottomNavigation.menu.size())
-        binding.viewPager.adapter = adapter
+        binding.viewPagerNav.adapter = adapter
 
-        binding.viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        binding.viewPagerNav.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
