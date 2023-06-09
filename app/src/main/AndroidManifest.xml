@@ -14,7 +14,9 @@
         <activity android:name=".MainActivity"/>
         <activity
             android:name=".login.presentation.ui.LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
