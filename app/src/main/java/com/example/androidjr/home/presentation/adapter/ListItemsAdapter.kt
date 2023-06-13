@@ -12,9 +12,10 @@ import com.example.androidjr.home.domain.entity.RoleItemEntity
 
 class ListItemsAdapter(
     private val context: Context,
-    val items: List<RoleItemEntity>
+    var items: List<RoleItemEntity>
 ) : RecyclerView.Adapter<ListItemsAdapter.ViewHolder>() {
 
+    var newList = items.toMutableList()
 
     class ViewHolder(binding: FragmentRoleItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -35,18 +36,17 @@ class ListItemsAdapter(
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         val inflater = LayoutInflater.from(context)
         val binding = FragmentRoleItemBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return newList.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = items[position]
+        val item = newList[position]
         holder.tvTitle.text = item.title
         holder.tvDescription.text = item.description
         holder.imgTitle.setImageResource(item.image)
@@ -84,7 +84,18 @@ class ListItemsAdapter(
             }
         }
     }
+
+    fun filterList(position: Int) {
+        newList.clear()
+        when (position) {
+            1 -> newList.addAll(items.filter { it.title.contains("Android") })
+            2 -> newList.addAll(items.filter { it.title.contains("Apple")})
+            3 -> newList.addAll(items.filter { it.title.contains("Flutter")})
+            else -> newList.addAll(items)
+        }
+    }
 }
+
 
 
 

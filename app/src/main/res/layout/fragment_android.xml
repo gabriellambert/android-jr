@@ -3,15 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.tabs.presentation.ui.BooksmarkFragment">
-
-    <TextView
-        android:id="@+id/fragment_android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/android"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-</FrameLayout>
+    tools:context=".home.tabs.presentation.ui.AndroidFragment"/>

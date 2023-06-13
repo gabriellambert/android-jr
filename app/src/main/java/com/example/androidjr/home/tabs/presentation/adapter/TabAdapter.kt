@@ -1,11 +1,13 @@
 package com.example.androidjr.home.tabs.presentation.adapter
 
-import com.example.androidjr.home.tabs.presentation.ui.BooksmarkFragment
-import com.example.androidjr.home.tabs.presentation.ui.RolesFragment
+import com.example.androidjr.home.tabs.presentation.ui.IosFragment
+import com.example.androidjr.home.tabs.presentation.ui.AndroidFragment
+import com.example.androidjr.home.tabs.presentation.ui.AllFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.androidjr.home.tabs.presentation.ui.FluttlerFragment
+import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.androidjr.home.tabs.presentation.ui.IosFragment
 
 internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
@@ -14,9 +16,10 @@ internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): Frag
 
     override fun getItem(position: Int): Fragment {
         return when(position){
-            0 -> RolesFragment()
-            1 -> BooksmarkFragment()
+            0 -> AllFragment()
+            1 -> AndroidFragment()
             2 -> IosFragment()
+            3 -> FluttlerFragment()
 
             else -> getItem(position)
         }

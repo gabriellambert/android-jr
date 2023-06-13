@@ -7,9 +7,58 @@ import java.math.BigDecimal
 data class RoleModel(
     val items: List<RoleItemEntity> = listOf(
         RoleItemEntity(
+            title = "Desenvolvedor Flutter",
+            image = R.drawable.flutter_svg,
+            description = "Vaga remota para desenvolvedor Flutter com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+        RoleItemEntity(
             title = "Desenvolvedor Android",
             image = R.drawable.ic_logo_android,
             description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+        RoleItemEntity(
+            title = "Desenvolvedor Apple",
+            image = R.drawable.ic_apple,
+            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+        RoleItemEntity(
+            title = "Desenvolvedor Android",
+            image = R.drawable.ic_logo_android,
+            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+
+        RoleItemEntity(
+            title = "Desenvolvedor Apple",
+            image = R.drawable.ic_apple,
+            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+        RoleItemEntity(
+            title = "Desenvolvedor Android",
+            image = R.drawable.ic_logo_android,
+            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            location = "São Paulo, SP",
+            company = "Google",
+            payment = BigDecimal(5000)
+        ),
+        RoleItemEntity(
+            title = "Desenvolvedor Flutter",
+            image = R.drawable.flutter_svg,
+            description = "Vaga remota para desenvolvedor Flutter com no mìnimo 3 anos de experiência.",
             location = "São Paulo, SP",
             company = "Google",
             payment = BigDecimal(5000)
@@ -87,33 +136,9 @@ data class RoleModel(
             payment = BigDecimal(5000)
         ),
         RoleItemEntity(
-            title = "Desenvolvedor Android",
-            image = R.drawable.ic_logo_android,
-            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
-            location = "São Paulo, SP",
-            company = "Google",
-            payment = BigDecimal(5000)
-        ),
-        RoleItemEntity(
-            title = "Desenvolvedor Apple",
-            image = R.drawable.ic_apple,
-            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
-            location = "São Paulo, SP",
-            company = "Google",
-            payment = BigDecimal(5000)
-        ),
-        RoleItemEntity(
-            title = "Desenvolvedor Android",
-            image = R.drawable.ic_logo_android,
-            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
-            location = "São Paulo, SP",
-            company = "Google",
-            payment = BigDecimal(5000)
-        ),
-        RoleItemEntity(
-            title = "Desenvolvedor Apple",
-            image = R.drawable.ic_apple,
-            description = "Vaga remota para desenvolvedor Adroid com no mìnimo 3 anos de experiência.",
+            title = "Desenvolvedor Flutter",
+            image = R.drawable.flutter_svg,
+            description = "Vaga remota para desenvolvedor Flutter com no mìnimo 3 anos de experiência.",
             location = "São Paulo, SP",
             company = "Google",
             payment = BigDecimal(5000)
