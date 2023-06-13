@@ -90,9 +90,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
                 binding.viewPagerNav.visibility = View.VISIBLE
                 binding.viewPagerTab.visibility = View.GONE
             }
