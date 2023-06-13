@@ -1,6 +1,7 @@
 package com.example.androidjr
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.androidjr.databinding.ActivityMainBinding
@@ -32,10 +33,15 @@ class MainActivity() : AppCompatActivity() {
         binding.viewPagerTab.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
+                binding.viewPagerNav.visibility = View.GONE
+                binding.viewPagerTab.visibility = View.VISIBLE
                 binding.viewPagerTab.currentItem = tab!!.position
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                binding.viewPagerNav.visibility = View.VISIBLE
+                binding.viewPagerTab.visibility = View.GONE
+            }
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
         return
@@ -80,7 +86,15 @@ class MainActivity() : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-                binding.bottomNavigation.menu.getItem(position)?.isChecked = true
+                var condi = binding.bottomNavigation.menu.getItem(position)?.isChecked
+                condi = true
+                if(condi == true) {
+                    binding.viewPagerNav.visibility = View.VISIBLE
+                    binding.viewPagerTab.visibility = View.GONE
+                }else{
+                    binding.viewPagerNav.visibility = View.GONE
+                    binding.viewPagerTab.visibility = View.VISIBLE
+                }
             }
 
             override fun onPageScrollStateChanged(state: Int) {}
