@@ -1,5 +1,6 @@
 package com.example.androidjr
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -52,9 +53,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-                var condi = binding.bottomNavigation.menu.getItem(position)?.isChecked
-                condi = true
-                if(condi == true) {
+                val cond: Boolean?
+                cond = true
+                if(cond) {
                     binding.viewPagerNav.visibility = View.VISIBLE
                     binding.viewPagerTab.visibility = View.GONE
                 }else{
@@ -80,6 +81,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewPagerTab.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            @SuppressLint("NotifyDataSetChanged")
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 binding.viewPagerTab.currentItem = tab?.position ?: 0
                 tab?.position?.let { adapterRecyclerView.filterList(it) }
