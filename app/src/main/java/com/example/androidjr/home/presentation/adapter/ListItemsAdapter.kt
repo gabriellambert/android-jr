@@ -17,6 +17,8 @@ class ListItemsAdapter(
 
     var newList = items.toMutableList()
 
+    //gdhjsagdjhsagdjhsa
+
     class ViewHolder(binding: FragmentRoleItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 

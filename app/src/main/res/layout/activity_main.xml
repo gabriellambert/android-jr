@@ -17,6 +17,8 @@
         app:tabTextAppearance="@style/TabLayoutTextStyle"
         app:tabTextColor="@color/black" />
 
+    <TextView/>
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

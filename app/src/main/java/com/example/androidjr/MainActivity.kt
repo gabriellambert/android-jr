@@ -15,6 +15,11 @@ class MainActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+
+    //hjdksahdjskahdejsa
+
+    //hdjskahdjsakdhsa
+    //hdjsahdjsadhsa
     private val role = RoleModel()
     private var adapterRecyclerView = ListItemsAdapter(context = this, items = role.items)
 
