@@ -81,12 +81,11 @@ class MainActivity : AppCompatActivity() {
         binding.viewPagerTab.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.viewPagerTab.currentItem = tab!!.position
-                adapterRecyclerView.filterList(tab.position)
+                binding.viewPagerTab.currentItem = tab?.position ?: 0
+                tab?.position?.let { adapterRecyclerView.filterList(it) }
                 adapterRecyclerView.notifyDataSetChanged()
                 binding.viewPagerNav.visibility = View.GONE
                 binding.viewPagerTab.visibility = View.VISIBLE
-                binding.viewPagerTab.currentItem = tab!!.position
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
