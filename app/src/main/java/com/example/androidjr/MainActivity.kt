@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         setupRecycleView()
     }
 
+    //hdsjakhdjsahdjsad
+
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnNavigationItemReselectedListener { item ->
             when (item.itemId) {
