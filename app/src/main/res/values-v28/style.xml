@@ -7,4 +7,8 @@
         <item name="android:textFontWeight">800</item>
         <item name="android:textAlignment">center</item>
     </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

@@ -5,9 +5,9 @@ import com.example.androidjr.home.tabs.presentation.ui.AndroidFragment
 import com.example.androidjr.home.tabs.presentation.ui.AllFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapterer
 import com.example.androidjr.home.tabs.presentation.ui.FluttlerFragment
 import com.example.androidjr.profile.presentation.ui.EditProfileFragment
+import androidx.fragment.app.FragmentPagerAdapter
 
 internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
@@ -20,7 +20,6 @@ internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): Frag
             1 -> AndroidFragment()
             2 -> IosFragment()
             3 -> FluttlerFragment()
-            2 -> EditProfileFragment()
 
             else -> getItem(position)
         }
