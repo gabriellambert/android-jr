@@ -6,14 +6,12 @@ import com.example.androidjr.home.tabs.presentation.ui.AllFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.androidjr.home.tabs.presentation.ui.FluttlerFragment
-import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 import androidx.fragment.app.FragmentPagerAdapter
 
 internal class TabAdapter(fm: FragmentManager, private var totalTabs: Int): FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
         return totalTabs
     }
-
     override fun getItem(position: Int): Fragment {
         return when(position){
             0 -> AllFragment()

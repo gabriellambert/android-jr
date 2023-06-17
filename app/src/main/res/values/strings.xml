@@ -82,4 +82,9 @@
     <string name="btn_exit_profile">Sair</string>
     <string name="ic_location">Location icon</string>
     <string name="main_profile_img_cardview">Main profile image</string>
+    <string name="todos">Todos</string>
+    <string name="Android">Android</string>
+    <string name="flutter">Flutter</string>
+    <string name="booksmark">BooksMark</string>
+    <string name="vazio" />
 </resources>

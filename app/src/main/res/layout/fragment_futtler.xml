@@ -3,4 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.tabs.presentation.ui.FluttlerFragment"/>
+    tools:context=".home.tabs.presentation.ui.FluttlerFragment">
+
+<TextView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:text="@string/flutter" />
+
+</FrameLayout>

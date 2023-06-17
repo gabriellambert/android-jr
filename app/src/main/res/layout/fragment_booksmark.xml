@@ -3,16 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".saveRoles.presentation.ui.SaveRolesFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/list"
+        android:text="@string/booksmark"
         android:textSize="30sp"
         android:textAlignment="center"
         android:gravity="center"
-        android:textColor="@color/white"
         />
 </FrameLayout>
