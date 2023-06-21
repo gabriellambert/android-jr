@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val role = RoleModel()
     private var adapterRecyclerView = ListItemsAdapter(context = this, items = role.items)
     private lateinit var tabLayout: TabLayout
-    private lateinit var viewPager2: ViewPager2
+    private lateinit var tabVIewPager: ViewPager2
     private lateinit var adapterPager: TabAdapter
     private lateinit var navController: NavController
 
@@ -39,43 +39,41 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
     }
+
     private fun setupTabLayout() {
         tabLayout = binding.tabLayout
-        viewPager2 = binding.viewPager2
+        tabVIewPager = binding.viewPager2
         adapterPager = TabAdapter(supportFragmentManager, lifecycle)
 
-        tabLayout.addTab(tabLayout.newTab().setText("Todos"))
-        tabLayout.addTab(tabLayout.newTab().setText("Android"))
-        tabLayout.addTab(tabLayout.newTab().setText("Ios"))
-        tabLayout.addTab(tabLayout.newTab().setText("Flutter"))
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.all))
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.android))
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.ios))
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.flutter))
 
-        viewPager2.adapter = adapterPager
+        tabVIewPager.adapter = adapterPager
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                if (tab != null) {
-                    viewPager2.currentItem = tab.position
+                tab?.let {
+                    tabVIewPager.currentItem = tab.position
                     adapterRecyclerView.filterList(tab.position)
                     adapterRecyclerView.notifyDataSetChanged()
                 }
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
 
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
 
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        tabVIewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 tabLayout.selectTab(tabLayout.getTabAt(position))
             }
         })
     }
+
     private fun setupRecycleView() {
         val recyclerView = binding.recyclerView
         recyclerView.setHasFixedSize(true)

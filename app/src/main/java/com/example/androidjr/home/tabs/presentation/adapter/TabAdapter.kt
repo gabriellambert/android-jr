@@ -13,8 +13,13 @@ class TabAdapter(
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {
+
+    companion object {
+        private const val TOTAL_TABS = 4
+    }
+
     override fun getItemCount(): Int {
-        return 4
+        return TOTAL_TABS
     }
 
     override fun createFragment(position: Int): Fragment {
@@ -22,9 +27,7 @@ class TabAdapter(
             0 -> AllFragment()
             1 -> AndroidFragment()
             2 -> IosFragment()
-            else -> {
-                FluttlerFragment()
-            }
+            else -> FluttlerFragment()
         }
     }
 }
