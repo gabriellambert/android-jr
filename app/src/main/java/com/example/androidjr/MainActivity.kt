@@ -1,12 +1,12 @@
 package com.example.androidjr
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import androidx.viewpager2.widget.ViewPager2
 import com.example.androidjr.databinding.ActivityMainBinding
-import com.example.androidjr.home.bottomNavigation.presentation.adapter.BottomNavAdapter
 import com.example.androidjr.home.domain.entity.params.RoleModel
 import com.example.androidjr.home.presentation.adapter.ListItemsAdapter
 import com.example.androidjr.home.tabs.presentation.adapter.TabAdapter
@@ -19,84 +19,62 @@ class MainActivity : AppCompatActivity() {
     }
     private val role = RoleModel()
     private var adapterRecyclerView = ListItemsAdapter(context = this, items = role.items)
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager2: ViewPager2
+    private lateinit var adapterPager: TabAdapter
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(binding.root)
+
         setupTabLayout()
-        setupBottomNavigation()
         setupRecycleView()
+        setupBottomNavigation()
     }
 
     private fun setupBottomNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            val position = when (item.itemId) {
-                R.id.ic_roles -> 0
-                R.id.ic_bookmarks -> 1
-                R.id.ic_profile -> 2
-                else -> 0
-            }
-            binding.viewPagerNav.currentItem = position
-            true
-        }
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
+    }
+    private fun setupTabLayout() {
+        tabLayout = binding.tabLayout
+        viewPager2 = binding.viewPager2
+        adapterPager = TabAdapter(supportFragmentManager, lifecycle)
 
-        val adapter = BottomNavAdapter(supportFragmentManager, binding.bottomNavigation.menu.size())
-        binding.viewPagerNav.adapter = adapter
+        tabLayout.addTab(tabLayout.newTab().setText("Todos"))
+        tabLayout.addTab(tabLayout.newTab().setText("Android"))
+        tabLayout.addTab(tabLayout.newTab().setText("Ios"))
+        tabLayout.addTab(tabLayout.newTab().setText("Flutter"))
 
-        binding.viewPagerNav.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-            }
+        viewPager2.adapter = adapterPager
 
-            override fun onPageSelected(position: Int) {
-                val cond: Boolean?
-                cond = true
-                if(cond) {
-                    binding.viewPagerNav.visibility = View.VISIBLE
-                    binding.viewPagerTab.visibility = View.GONE
-                }else{
-                    binding.viewPagerNav.visibility = View.GONE
-                    binding.viewPagerTab.visibility = View.VISIBLE
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                if (tab != null) {
+                    viewPager2.currentItem = tab.position
+                    adapterRecyclerView.filterList(tab.position)
+                    adapterRecyclerView.notifyDataSetChanged()
                 }
             }
 
-            override fun onPageScrollStateChanged(state: Int) {}
-        })
-    }
-
-    private fun setupTabLayout() {
-        binding.tabLayout.apply {
-            addTab(binding.tabLayout.newTab().setText("Todos"))
-            addTab(binding.tabLayout.newTab().setText("Android"))
-            addTab(binding.tabLayout.newTab().setText("Ios"))
-            addTab(binding.tabLayout.newTab().setText("Flutter"))
-            tabGravity = TabLayout.GRAVITY_FILL
-        }
-        val adapter = TabAdapter(supportFragmentManager, binding.tabLayout.tabCount)
-        binding.viewPagerTab.adapter = adapter
-
-        binding.viewPagerTab.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout))
-        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            @SuppressLint("NotifyDataSetChanged")
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                binding.viewPagerTab.currentItem = tab?.position ?: 0
-                tab?.position?.let { adapterRecyclerView.filterList(it) }
-                adapterRecyclerView.notifyDataSetChanged()
-                binding.viewPagerNav.visibility = View.GONE
-                binding.viewPagerTab.visibility = View.VISIBLE
-            }
-
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                binding.viewPagerNav.visibility = View.VISIBLE
-                binding.viewPagerTab.visibility = View.GONE
+
             }
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
         })
-        return
+
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                tabLayout.selectTab(tabLayout.getTabAt(position))
+            }
+        })
     }
     private fun setupRecycleView() {
         val recyclerView = binding.recyclerView
