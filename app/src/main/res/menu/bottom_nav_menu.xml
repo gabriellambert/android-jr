@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ic_roles"
+        android:id="@+id/menu_home"
         android:enabled="true"
         android:icon="@drawable/baseline_smartphone_24"
         android:title=""
         />
     <item
-        android:id="@+id/ic_bookmarks"
+        android:id="@+id/menu_bookmarks"
         android:enabled="true"
         android:icon="@drawable/baseline_bookmark_24"
         android:title=""
         />
     <item
-        android:id="@+id/ic_profile"
+        android:id="@+id/menu_profile"
         android:enabled="true"
         android:icon="@drawable/baseline_person_24"
         android:title=""

@@ -1,15 +1,15 @@
 package com.example.androidjr.home.bottomNavigation.presentation.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.androidjr.databinding.FragmentProfileBinding
 import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 
 class ProfileFragment : Fragment() {
-    private var _binding:FragmentProfileBinding? = null
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class ProfileFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         goToEditProfileScreen()
