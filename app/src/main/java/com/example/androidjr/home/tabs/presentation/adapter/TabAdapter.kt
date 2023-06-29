@@ -8,6 +8,7 @@ import com.example.androidjr.home.tabs.presentation.ui.AllFragment
 import com.example.androidjr.home.tabs.presentation.ui.AndroidFragment
 import com.example.androidjr.home.tabs.presentation.ui.FluttlerFragment
 import com.example.androidjr.home.tabs.presentation.ui.IosFragment
+import com.example.androidjr.profile.presentation.ui.EditProfileFragment
 
 class TabAdapter(
     fragmentManager: FragmentManager,

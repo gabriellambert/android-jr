@@ -24,18 +24,17 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        goToEditProfileScreen()
+        //goToEditProfileScreen()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-    private fun goToEditProfileScreen() {
-        binding.buttonEditProfile.setOnClickListener {
-            val editProfileFragment = EditProfileFragment()
-            editProfileFragment.show(parentFragmentManager, "EditProfileFragment")
-        }
-    }
 }
+
+//    private fun goToEditProfileScreen() {
+//        binding.buttonEditProfile.setOnClickListener {
+//            val editProfileFragment = EditProfileFragment()
+//           editProfileFragment.show(parentFragmentManager, "EditProfileFragment")
+//        }
