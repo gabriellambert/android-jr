@@ -2,29 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/menu_home">
+    android:id="@+id/mav_graph"
+    app:startDestination="@id/homeFragment">
+
     <fragment
-        android:id="@+id/menu_home"
-        android:name="com.example.androidjr.home.bottomNavigation.presentation.ui.RolesFragment"
+        android:id="@+id/homeFragment"
+        android:name="com.example.androidjr.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/menu_bookmarks"
+        android:id="@+id/bookmarkFragment"
         android:name="com.example.androidjr.home.bottomNavigation.presentation.ui.BookmarkFragment"
-        android:label="BookmarkFragment" />
-    <fragment
-        android:id="@+id/menu_profile"
-        android:name="com.example.androidjr.home.bottomNavigation.presentation.ui.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_menu_profile_to_editProfileFragment"
-            app:destination="@id/editProfileFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/editProfileFragment"
-        android:name="com.example.androidjr.profile.presentation.ui.EditProfileFragment"
-        android:label="fragment_edit_profile"
-        tools:layout="@layout/fragment_edit_profile" />
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+
+    <include app:graph="@navigation/profile"/>
 </navigation>

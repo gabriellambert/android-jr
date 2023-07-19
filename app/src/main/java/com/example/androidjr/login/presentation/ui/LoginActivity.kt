@@ -6,14 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.androidjr.MainActivity
 import com.example.androidjr.databinding.ActivityLoginBinding
 
+
 class LoginActivity : AppCompatActivity() {
 
-    private val binding by lazy {
-        ActivityLoginBinding.inflate(layoutInflater)
-    }
+    private lateinit var binding : ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         goToHomeScreen()

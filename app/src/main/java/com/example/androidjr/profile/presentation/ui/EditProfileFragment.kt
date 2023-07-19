@@ -7,24 +7,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.androidjr.R
+import com.example.androidjr.databinding.FragmentEditProfileBinding
 import com.example.androidjr.home.bottomNavigation.presentation.ui.ProfileFragment
 
-class EditProfileFragment : Fragment(R.layout.fragment_edit_profile) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        activity?.setActionBar(activity?.findViewById(R.id.toolbar))
-    }
+class EditProfileFragment : Fragment() {
+
+    private var _binding: FragmentEditProfileBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_profile, container, false)
-
-
+    ): View {
+        _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
 
 
 }

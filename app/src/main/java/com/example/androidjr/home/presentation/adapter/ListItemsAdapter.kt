@@ -10,14 +10,63 @@ import com.example.androidjr.databinding.FragmentRoleItemBinding
 import com.example.androidjr.home.domain.entity.RoleItemEntity
 
 
-class ListItemsAdapter(
+class RoleItemAdapter(
     private val context: Context,
-    var items: List<RoleItemEntity>
-) : RecyclerView.Adapter<ListItemsAdapter.ViewHolder>() {
+    private var items: List<RoleItemEntity>
+) : RecyclerView.Adapter<RoleItemAdapter.RoleViewHolder>() {
 
-    var newList = items.toMutableList()
+    private var newList = items.toMutableList()
 
-    class ViewHolder(binding: FragmentRoleItemBinding) :
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoleViewHolder {
+        val binding = FragmentRoleItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        return RoleViewHolder(binding)
+    }
+
+    override fun getItemCount(): Int {
+        return newList.size
+    }
+
+    override fun onBindViewHolder(holder: RoleViewHolder, position: Int) {
+        val item = newList[position]
+        holder.run {
+            tvTitle.text = item.title
+            tvDescription.text = item.description
+            imgTitle.setImageResource(item.image)
+            tvLocation.text = item.location
+            tvCompany.text = item.company
+            tvPayment.text = item.payment.toPlainString()
+
+            imgExpand.setOnClickListener {
+                if (tvDescription.visibility == View.GONE){
+                    tvDescription.visibility = View.VISIBLE
+                    imgLocation.visibility = View.VISIBLE
+                    imgCompany.visibility = View.VISIBLE
+                    imgPayment.visibility = View.VISIBLE
+                    imgBookmark.visibility = View.VISIBLE
+                    btnApply.visibility = View.VISIBLE
+                    tvLocation.visibility = View.VISIBLE
+                    tvCompany.visibility = View.VISIBLE
+                    tvPayment.visibility = View.VISIBLE
+
+                    imgExpand.setImageResource(R.drawable.baseline_arrow_drop_up_24)
+                }else{
+                    tvDescription.visibility = View.GONE
+                    imgLocation.visibility = View.GONE
+                    imgCompany.visibility = View.GONE
+                    imgPayment.visibility = View.GONE
+                    imgExpand.setImageResource(R.drawable.ic_arrow_right)
+                    imgBookmark.visibility = View.GONE
+                    btnApply.visibility = View.GONE
+                    tvLocation.visibility = View.GONE
+                    tvCompany.visibility = View.GONE
+                    tvPayment.visibility = View.GONE
+                }
+            }
+        }
+    }
+
+    inner class RoleViewHolder(binding: FragmentRoleItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         val tvTitle = binding.textTitle
@@ -33,56 +82,6 @@ class ListItemsAdapter(
         val tvCompany = binding.textCompanyGoogle
         val tvPayment = binding.textPaymentValue
 
-        }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val inflater = LayoutInflater.from(context)
-        val binding = FragmentRoleItemBinding.inflate(inflater, parent, false)
-        return ViewHolder(binding)
-    }
-
-    override fun getItemCount(): Int {
-        return newList.size
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = newList[position]
-        holder.tvTitle.text = item.title
-        holder.tvDescription.text = item.description
-        holder.imgTitle.setImageResource(item.image)
-        holder.tvLocation.text = item.location
-        holder.tvCompany.text = item.company
-        holder.tvPayment.text = item.payment.toPlainString()
-
-        holder.imgExpand.setOnClickListener {
-
-            if (holder.tvDescription.visibility == View.GONE){
-                holder.tvDescription.visibility = View.VISIBLE
-                holder.imgLocation.visibility = View.VISIBLE
-                holder.imgCompany.visibility = View.VISIBLE
-                holder.imgPayment.visibility = View.VISIBLE
-                holder.imgBookmark.visibility = View.VISIBLE
-                holder.btnApply.visibility = View.VISIBLE
-                holder.tvLocation.visibility = View.VISIBLE
-                holder.tvCompany.visibility = View.VISIBLE
-                holder.tvPayment.visibility = View.VISIBLE
-
-                holder.imgExpand.setImageResource(R.drawable.baseline_arrow_drop_up_24)
-            }else{
-                holder.tvDescription.visibility = View.GONE
-                holder.imgLocation.visibility = View.GONE
-                holder.imgCompany.visibility = View.GONE
-                holder.imgPayment.visibility = View.GONE
-                holder.imgExpand.setImageResource(R.drawable.ic_arrow_right)
-                holder.imgBookmark.visibility = View.GONE
-                holder.btnApply.visibility = View.GONE
-                holder.tvLocation.visibility = View.GONE
-                holder.tvCompany.visibility = View.GONE
-                holder.tvPayment.visibility = View.GONE
-
-
-            }
-        }
     }
 
     fun filterList(position: Int) {
@@ -95,7 +94,4 @@ class ListItemsAdapter(
         }
     }
 }
-
-
-
 
