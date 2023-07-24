@@ -23,6 +23,7 @@
                 android:id="@+id/icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/space"
                 android:src="@drawable/arrow_left"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +33,7 @@
                 android:id="@+id/text_criar_vaga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Criar vaga"
+                android:text="@string/criar_vaga"
                 android:textSize="22sp"
                 android:layout_marginStart="16dp"
                 app:layout_constraintStart_toEndOf="@id/icon"
@@ -62,9 +63,9 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="0dp"
-            android:hint="Titulo"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/titulo"
+            android:text="@string/input"
+            android:textSize="20sp"
             android:layout_marginTop="2dp"
             />
 
@@ -88,9 +89,9 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="0dp"
-            android:hint="Localização"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/localiza_o"
+            android:text="@string/input"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,9 +114,9 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="0dp"
-            android:hint="Empresa"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/empresa"
+            android:text="@string/input"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -138,9 +139,9 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="0dp"
-            android:hint="Salário"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/sal_rio"
+            android:text="@string/input"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -163,9 +164,9 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:padding="0dp"
-            android:hint="Link da vaga"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/link_da_vaga"
+            android:text="@string/input"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -187,9 +188,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="top"
-            android:hint="Descrição da vaga"
-            android:text="Input"
-            android:textSize="20dp"
+            android:hint="@string/descri_o_da_vaga"
+            android:text="@string/input"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -200,7 +201,6 @@
         android:layout_height="wrap_content"
         android:text="@string/limite_de_200_caracteres"
         android:textColor="@color/blue_green_deep"
-        android:textFontWeight="400"
         android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@id/input_descricao_da_vaga"
         app:layout_constraintStart_toStartOf="@id/input_descricao_da_vaga"
@@ -211,12 +211,12 @@
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="@color/orange"
-        android:text="CONFIRMAR"
+        android:backgroundTint="@color/orange_dark"
+        android:text="@string/CONFIRMAR"
         android:textColor="@color/white"
         app:cornerRadius="100dp"
-        app:layout_constraintTop_toBottomOf="@id/limite"
-        app:layout_constraintEnd_toEndOf="@id/input_descricao_da_vaga"/>
+        app:layout_constraintEnd_toEndOf="@id/input_descricao_da_vaga"
+        app:layout_constraintTop_toBottomOf="@id/limite" />
 
 
 

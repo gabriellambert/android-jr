@@ -48,4 +48,12 @@
     <string name="ic_location">Location icon</string>
     <string name="main_profile_img_cardview">Main profile image</string>
     <string name="limite_de_200_caracteres">Limite de 200 caracteres</string>
+    <string name="space" />
+    <string name="criar_vaga">Criar vaga</string>
+    <string name="input">Input</string>
+    <string name="empresa">Empresa</string>
+    <string name="sal_rio">Salário</string>
+    <string name="link_da_vaga">Link da vaga</string>
+    <string name="descri_o_da_vaga">Descrição da vaga</string>
+    <string name="CONFIRMAR">CONFIRMAR</string>
 </resources>
