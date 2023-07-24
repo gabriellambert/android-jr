@@ -60,7 +60,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:hint="Titulo"
             android:text="Input"
             android:textSize="20dp"
@@ -85,7 +86,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:hint="Localização"
             android:text="Input"
             android:textSize="20dp"
@@ -109,7 +111,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:hint="Empresa"
             android:text="Input"
             android:textSize="20dp"
@@ -133,7 +136,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:hint="Salário"
             android:text="Input"
             android:textSize="20dp"
@@ -157,7 +161,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:hint="Link da vaga"
             android:text="Input"
             android:textSize="20dp"
@@ -168,7 +173,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_descricao_da_vaga"
         android:layout_width="328dp"
-        android:layout_height="204dp"
+        android:layout_height="140dp"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         app:boxCornerRadiusTopEnd="4dp"
@@ -204,15 +209,14 @@
     <Button
         android:id="@+id/botao_confirmar"
         android:layout_width="160dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="40dp"
         android:backgroundTint="@color/orange"
         android:text="CONFIRMAR"
         android:textColor="@color/white"
         app:cornerRadius="100dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/limite" />
+        app:layout_constraintTop_toBottomOf="@id/limite"
+        app:layout_constraintEnd_toEndOf="@id/input_descricao_da_vaga"/>
 
 
 
