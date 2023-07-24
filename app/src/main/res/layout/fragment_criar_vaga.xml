@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lemon_green"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/text_criar_vaga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar vaga"
+                android:textSize="22sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_titulo"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_box"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Titulo"
+            android:text="Input"
+            android:textSize="20dp"
+            android:layout_marginTop="2dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_localizacao"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_titulo"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Localização"
+            android:text="Input"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_empresa"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_localizacao"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Empresa"
+            android:text="Input"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_Salario"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_empresa"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Salário"
+            android:text="Input"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_link_da_vaga"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_Salario"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Link da vaga"
+            android:text="Input"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_descricao_da_vaga"
+        android:layout_width="328dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_link_da_vaga"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="Descrição da vaga"
+            android:text="Input"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/limite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/limite_de_200_caracteres"
+        android:textColor="@color/blue_green_deep"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/input_descricao_da_vaga"
+        app:layout_constraintStart_toStartOf="@id/input_descricao_da_vaga"
+         />
+
+    <Button
+        android:id="@+id/botao_confirmar"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/orange"
+        android:text="CONFIRMAR"
+        android:textColor="@color/white"
+        app:cornerRadius="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/limite" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

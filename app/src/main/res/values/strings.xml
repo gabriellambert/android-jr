@@ -32,7 +32,7 @@
     <string name="editar_foto_de_perfil"><u>Editar foto de perfil</u></string>
     <string name="nome">Nome</string>
     <string name="sobrenome">Sobrenome</string>
-    <string name="t_tulo">Título</string>
+    <string name="titulo">Título</string>
     <string name="localiza_o">Localização</string>
     <string name="github">Github</string>
     <string name="linkedin">Linkedin</string>
@@ -47,4 +47,5 @@
     <string name="btn_exit_profile">Sair</string>
     <string name="ic_location">Location icon</string>
     <string name="main_profile_img_cardview">Main profile image</string>
+    <string name="limite_de_200_caracteres">Limite de 200 caracteres</string>
 </resources>
